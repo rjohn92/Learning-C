@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+
 int main() {
     int a = 15; // Declare and initialize an integer variable a with the value 15
     int b = 6;  // Declare and initialize an integer variable b with the value 5
