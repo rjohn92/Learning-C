@@ -106,18 +106,18 @@ gcc -Wall -Wextra -o myprog myprog.c
 
 ---
 
-Why the Command Line Matters
-In C, you’re close to the metal. The terminal is your cockpit:
+## Why the Command Line Matters
+- In C, you’re close to the metal. The terminal is your cockpit:
 
-Run and compile programs
+- Run and compile programs
 
-Debug using gdb
+- Debug using gdb
 
-Use tools like strace, objdump, and valgrind
+- Use tools like strace, objdump, and valgrind
 
-Set environment variables and pass CLI arguments
+- Set environment variables and pass CLI arguments
 
-Mastering the command line is non-negotiable if you want to become proficient in systems programming, reverse engineering, or offensive security.
+** Mastering the command line is non-negotiable if you want to become proficient in systems programming, reverse engineering, or offensive security. **
 
 ---
 
