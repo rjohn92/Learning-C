@@ -70,6 +70,7 @@ Compile and run:
 gcc hello.c -o hello
 ./hello
 ```
+---
 
 Understanding Errors, Warnings, and Compiler Flags
 Compilation Errors
@@ -83,13 +84,13 @@ You’ll get errors like:
 ``` css
 error: expected ‘;’ before ‘}’
 ```
-# Warnings
+## Warnings
 Warnings don't stop compilation, but they indicate potential bugs. Always enable them:
 
 ``` bash
 gcc -Wall -Wextra -o myprog myprog.c
 ```
-Common Compiler Flags
+## Common Compiler Flags
 -o output: Set output binary name
 
 -Wall: Show common warnings
@@ -97,6 +98,8 @@ Common Compiler Flags
 -g: Include debug info for tools like gdb
 
 -O0 to -O3: Set optimization level
+
+---
 
 Why the Command Line Matters
 In C, you’re close to the metal. The terminal is your cockpit:
@@ -111,8 +114,10 @@ Set environment variables and pass CLI arguments
 
 Mastering the command line is non-negotiable if you want to become proficient in systems programming, reverse engineering, or offensive security.
 
-Next Steps
-You should now:
+---
+
+## Next Steps
+### You should now:
 
 Know what C is and why it matters
 
@@ -124,7 +129,9 @@ Understand compiler warnings and errors
 
 Be comfortable using the command line
 
-🧠 Check Yourself
+---
+
+## 🧠 Check Yourself
 What is C primarily used for?
 
 Why are compiler warnings just as important as errors?
@@ -135,7 +142,9 @@ What does return 0 do in main()?
 
 What happens if you omit a semicolon in your code?
 
-✅ Practice
+---
+
+## ✅ Practice
 Write a program that prints your name and age.
 
 Write a program that prints two integers and their sum.
