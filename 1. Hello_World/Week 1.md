@@ -117,7 +117,7 @@ gcc -Wall -Wextra -o myprog myprog.c
 
 - Set environment variables and pass CLI arguments
 
-** Mastering the command line is non-negotiable if you want to become proficient in systems programming, reverse engineering, or offensive security. **
+**Mastering the command line is non-negotiable if you want to become proficient in systems programming, reverse engineering, or offensive security.**
 
 ---
 
