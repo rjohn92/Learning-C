@@ -26,11 +26,11 @@ You’ll need a compiler, a terminal, and a text editor. Here’s the simplest s
 # Debian/Ubuntu
 sudo apt update && sudo apt install build-essential
 ```
-# Fedora
+#### Fedora
 ```bash
 sudo dnf groupinstall "Development Tools"
 ```
-# macOS (via Homebrew)
+#### macOS (via Homebrew)
 ```bash
 brew install gcc
 ```
@@ -40,7 +40,10 @@ You can verify installation with:
 gcc --version
 clang --version
 ```
-Step 2: Choose a Text Editor
+
+---
+
+## Step 2: Choose a Text Editor
 Recommended:
 
 VSCode: Lightweight but powerful, with C/C++ extensions.
@@ -49,11 +52,13 @@ Vim or Neovim: For terminal power-users.
 
 Emacs: Popular among academics and hackers.
 
+---
+
 Step 3: Create Your Workspace
 ```bash
 mkdir ~/Learning-C && cd ~/Learning-C
 ```
-Writing Your First C Program
+## Writing Your First C Program
 Save this as hello.c:
 
 ```c
