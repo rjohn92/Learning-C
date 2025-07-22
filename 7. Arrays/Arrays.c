@@ -8,10 +8,17 @@ int main() {
         printf("Element %d: %d\n", i, numbers[i]); // Print the index and value of each element in the array
         }
     
-    char nickname[] = {"Coder"}; // Declare and initialize a character array (string) named nickname with 5 characters}
+    char nickname[] = {'C','o','d','e','r'}; // Declare and initialize a character array (string) named nickname with 5 characters}
         for (int i = 0; i < 5; i++) {   // Loop through each character of the string
             printf("Your nickname is: %c\n", nickname[i]); // Print each character of the string
         }
     printf("Your nickname '%s' is %ld digits long\n", nickname, strlen(nickname)); // Print the length of the string using strlen function from string.h
+    
+    char name[20];
+    strcpy(name, "CNO Coder"); // Copy the string "CNO Coder" into the character array 'name'
+    
+
     return 0; // Return 0 to indicate successful execution of the program
+    
+    
 };
