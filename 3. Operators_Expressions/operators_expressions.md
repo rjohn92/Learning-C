@@ -107,15 +107,6 @@ Understanding how they work—and where they can bite you—is essential for wri
 
 ---
 
-## Practice / Exercises
-
-- Write a calculator that performs all basic arithmetic operations.
-- Experiment with logical and bitwise operators—print out results for various combinations.
-- Write expressions mixing multiple operators and use parentheses to predict and check results.
-- Trigger and investigate integer division and overflow cases.
-- Try using increment/decrement inside a loop or an expression—see what changes!
-
----
 
 ## Further Reading
 
