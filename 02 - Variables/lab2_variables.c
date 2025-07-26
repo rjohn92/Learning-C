@@ -16,6 +16,14 @@ int main () {
 
     printf("Size of char: : %zu\n",sizeof(char));
     printf("Size of size_t: %zu\n", sizeof(size_t));
+
+    int a = 999; // Declare an integer variable with a large value
+    printf("Size of 'a': %zu\n", sizeof(a));
+
+    int large_number = 2147483647; // Maximum value for a 32-bit signed integer
+    printf("Size of 'large_number': %zu\n", sizeof(large_number));
+
+    printf("Size of '3.14' is: %zu\n", sizeof 3.14);   // Prints 8 on my system
     return 0;
 }
 
