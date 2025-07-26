@@ -8,3 +8,5 @@ int main () {
     printf("Address of x: %p\n", (void*)&x); // Print the address of x
 
 }
+
+
