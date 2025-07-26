@@ -12,8 +12,7 @@
 
 ### Q2: Is the address always the same between runs? Why or why not?
 
-**A:**  
-No. Memory addresses change from run to run due to Address Space Layout Randomization (ASLR) and process isolation in modern operating systems. This prevents hardcoded addresses from being reliable and helps mitigate security vulnerabilities.
+**A:**  No. Memory addresses change from run to run due to Address Space Layout Randomization (ASLR) and process isolation in modern operating systems. This prevents hardcoded addresses from being reliable and helps mitigate security vulnerabilities.
 
 ---
 
