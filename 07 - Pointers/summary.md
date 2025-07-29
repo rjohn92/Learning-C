@@ -21,7 +21,7 @@
 
 ---
 
-# Summary: Pointers Lab – Basic Pointer Declaration, Addressing, and Dereferencing
+# Summary: Pointers Lab: Basic Pointer Declaration, Addressing, and Dereferencing
 
 ## Key Concepts Learned
 
@@ -57,7 +57,7 @@
 ## Practical Use Cases
 
 - **Referencing** is essential for passing variables by reference to functions, manipulating data structures, and interfacing with hardware/memory directly.
-- **Dereferencing** lets you access or modify the value stored at a memory location—a fundamental skill for any C programmer, and critical for systems and CNO work.
+- **Dereferencing** lets you access or modify the value stored at a memory location. That's a fundamental skill for any C programmer, and critical for systems and CNO work.
 
 ---
 
