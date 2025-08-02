@@ -4,8 +4,8 @@
 
 int length_of_array(char chars[]) {
 
-    int total_bytes = sizeof chars; // Get the total bytes of the array
-    int bytes_per_char = sizeof(char); // Get the size of a single char
+    size_t total_bytes = sizeof chars; // Get the total bytes of the array
+    size_t bytes_per_char = sizeof(char); // Get the size of a single char
 
     printf("Total bytes in chars array: %zu\n", total_bytes); // Print the bytes of chars
     printf("Bytes in chars type: %zu\n", bytes_per_char); // Print the bytes of a single char
@@ -17,15 +17,29 @@ int length_of_array(char chars[]) {
 }
 
 
+int correct_length_of_array(char chars[], size_t size) {
+    printf("Total bytes in chars array: %zu\n", size); // Print the total bytes of the array
+    printf("Bytes in chars type: %zu\n", sizeof(char)); // Print the bytes of a single char
 
+    int length = size / sizeof(char); // Calculate the length of the array
+    printf("Length of chars array: %d\n", length); // Print the length of the array
+    return length; // Return the length of the array
+}
 
 int main() {
-    char s [] = {'a', 'b', 'c', 'd', 'e', 'f', 'g','h','\0'}; // Declare a string array with null terminator
+    char s [] = {'a', 'b', 'c', 'd','\0'}; // Declare a string array with null terminator
     printf("%zu\n", sizeof s);            // Total bytes of s array
     printf("%zu\n", sizeof(char));         // Bytes per element
     printf("%zu\n", sizeof s / sizeof(char)); // Number of elements
-    for (int i = 0; i <= sizeof s / sizeof(char); i++) { // Loop through each element
+    for (int i = 0; i < sizeof s / sizeof(char); i++) { // Loop through each element
         printf("%c ", s[i]); // Print each character in the string
     }
+    printf("\n------------------\n");
+    printf("Length of s array: %d\n", length_of_array(s)); // Call the function to get the length of the array
+
+    printf("\n------------------\n");
+
+
+    printf("Correct length of s array: %d\n", correct_length_of_array(s, sizeof s)); // Call the function with size parameter
     return 0; // Return 0 to indicate successful execution of the program
 }
