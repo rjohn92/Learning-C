@@ -75,3 +75,10 @@ printf("Value pointed to by p (*p): %d\n", *p); // prints 5
 *p = 10;
 printf("Value of a after *p = 10: %d\n", a);    // prints 10
 ```
+
+
+---
+## Exercise #6
+For this one the exercise was to create a pointer to NULL. Then try to dereference it using ```*p=1```. The result was a segmentation fault. This is because the p value is pointing at 0x0. This is not a dereferanceable location in memory. 
+
+We can initialize pointers to NULL just to show they aren't pointing to valid memory (yet). 
