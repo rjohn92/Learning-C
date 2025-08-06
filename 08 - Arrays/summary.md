@@ -64,3 +64,4 @@ Value at index '5' is: 32764
 Value at index '6' is: 990807808
 ```
 
+This output is garbage. It's unreliable. It would be better if this code just crashed. But the program doesn't crash. It does not throw an "out of bounds" error. 
