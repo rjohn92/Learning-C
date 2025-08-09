@@ -235,21 +235,110 @@ p = NULL;  // Prevents use of a dangling pointer
 ```
 
 ---
-## Stack vs Heap Memory
-### Stack Memory
-- The stack is used for static memory allocation (local variables).
+## Stack vs Heap in C
 
-- Memory is automatically freed when the function returns.
+## 1. Both Are Regions of RAM
 
-### Heap Memory
-- The heap is used for dynamic memory allocation (via malloc, calloc, etc.).
+When a C program runs, the operating system provides it with virtual memory divided into distinct sections:
 
-- Memory must be manually freed with free().
+* **Code segment** → compiled instructions.
+* **Data segments** → global and static variables.
+* **Heap** → dynamic allocations (`malloc`, `calloc`, `realloc`, `free`).
+* **Stack** → function calls, local variables, and return addresses.
 
-### Key Differences:
-- Stack memory is faster but has limited size.
+---
 
-- Heap memory is slower but offers dynamic and larger memory allocation.
+## 2. The Stack
+
+* **Managed automatically** by the compiler/runtime.
+* Used for:
+
+  * Function parameters
+  * Local (automatic) variables
+  * Return addresses and saved registers
+* **LIFO (Last In, First Out)** structure:
+
+  * Function call → push a *stack frame*.
+  * Function return → pop the frame.
+* **Lifetime** → variables vanish when the function returns.
+* **Typical size** → small (megabytes), fixed per thread.
+* **Speed** → very fast (adjusts a stack pointer register).
+
+**Example:**
+
+```c
+void foo() {
+    int x = 42;  // stored on the stack
+} // x is gone here
+```
+
+---
+
+## 3. The Heap
+
+* **Managed manually** by the programmer (or libraries).
+* Used for:
+
+  * Data whose size or lifetime is unknown until runtime
+  * Large objects that may overflow the stack
+* **Lifetime** → exists until `free()` is called.
+* **Typical size** → large (gigabytes possible, system-dependent).
+* **Speed** → slower than stack (requires allocator bookkeeping).
+
+**Example:**
+
+```c
+void foo() {
+    int *p = malloc(sizeof(int)); // allocated on heap
+    *p = 42;
+    // can return p; memory lives until free(p);
+}
+```
+
+---
+
+## 4. Key Differences Table
+
+| Feature              | Stack                        | Heap                        |
+| -------------------- | ---------------------------- | --------------------------- |
+| **Management**       | Automatic (compiler)         | Manual (`malloc`/`free`)    |
+| **Lifetime**         | Until function returns       | Until `free()` is called    |
+| **Allocation speed** | Very fast                    | Slower                      |
+| **Typical size**     | Small (MB)                   | Large (system-dependent)    |
+| **Access pattern**   | LIFO                         | Any order                   |
+| **Common use**       | Local variables, call frames | Dynamic/long-lived data     |
+| **Risk**             | Overflow → crash             | Leak → memory grows forever |
+
+---
+
+## 5. Visual Model *(Typical 64-bit Linux)*
+
+```
+High addresses
++---------------------------+
+|         Stack             |  <- grows DOWN as functions are called
+|     Local vars, frames    |
++---------------------------+
+|      Unused gap           |
++---------------------------+
+|         Heap              |  <- grows UP as you malloc()
+|  Dynamic allocations      |
++---------------------------+
+|  BSS / Data / Code        |
+Low addresses
+```
+
+---
+
+## 6. Why This Matters for the Lab
+
+* **Printing addresses** of a stack variable and a heap allocation will show they’re in different regions.
+* **Returning a pointer to a stack variable is unsafe**:
+
+  * Stack memory is reclaimed when the function ends → pointer becomes *dangling*.
+* **Returning a pointer to heap memory is fine**:
+
+  * Heap memory persists until `free()` is called.
 
 ---
 
