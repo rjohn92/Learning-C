@@ -1,4 +1,10 @@
-# More Pointer Labs
+# Core Pointer Labs (Tool-Free)
+
+These labs build foundational skills with pointers, memory allocation, and safe idioms — without requiring structs, Valgrind, or GDB yet.
+
+---
+
+## Lab 1 — Pointer Arithmetic (No Array Indexing)
 
 **Goal:** Understand pointer traversal and addresses.
 
