@@ -2,16 +2,17 @@
 
 ---
 
-## Module 1: Getting Started With C
+## Module 0: Getting Started With C
 - What is C? History and context  
 - Installing a compiler (`gcc`/`clang`) and setting up your environment  
 - Writing, compiling, and running your first C program  
 - Understanding errors, warnings, and compiler flags  
 - Using the command line  
+- Write simple hello_world.c
 
 ---
 
-## Module 2: Basic Data Types and Variables
+## Module 1: Basic Data Types and Variables
 - Data types: `int`, `float`, `double`, `char`, `size_t`, etc.  
 - Declaration, initialization, assignment  
 - Scope and lifetime of variables  
@@ -20,7 +21,7 @@
 
 ---
 
-## Module 3: Operators and Expressions
+## Module 2: Operators and Expressions
 - Arithmetic, comparison, logical, and bitwise operators  
 - Precedence and associativity  
 - Compound assignments and increment/decrement  
@@ -28,7 +29,7 @@
 
 ---
 
-## Module 4: Control Flow
+## Module 3: Conditionals
 - `if`, `else if`, `else`  
 - `switch` and `case`  
 - Looping: `for`, `while`, `do...while`  
@@ -36,6 +37,10 @@
 
 ---
 
+## Module 4: Loops
+- for loops, while loops, do-while loops
+
+---
 ## Module 5: Functions
 - Defining, declaring, and calling functions  
 - Arguments and return values  
@@ -44,8 +49,12 @@
 - Function pointers and callback basics (how they work, why they matter in CNO/RE)  
 
 ---
+## Module 6: Pointers (Intro)
+- Pointer basics: declaration, dereferencing, and address-of (`*`, `&`)  
+- Pointers and arrays, pointer arithmetic  
+- Double pointers (`int **`) and their uses  
 
-## Module 6: Arrays and Strings
+## Module 7: Arrays and Strings
 - Declaring and initializing arrays  
 - Accessing/modifying array elements  
 - Multi-dimensional arrays  
@@ -55,17 +64,14 @@
 
 ---
 
-## Module 7: Pointers and Memory Management
-- Pointer basics: declaration, dereferencing, and address-of (`*`, `&`)  
-- Pointers and arrays, pointer arithmetic  
-- Double pointers (`int **`) and their uses  
+## Module 8: Pointers and Memory Management
 - Dynamic memory allocation (`malloc`, `calloc`, `realloc`, `free`)  
 - Memory leaks, dangling pointers, undefined behavior  
 - Stack vs. heap memory: how C uses both, why it matters  
 
 ---
 
-## Module 8: Structures and Data Organization
+## Module 9: Structures and Data Organization
 - Defining and using `struct`s  
 - Struct pointers, nested structs, arrays of structs  
 - Enums, unions (basics)  
@@ -73,7 +79,7 @@
 
 ---
 
-## Module 9: File Input/Output and OS Interaction
+## Module 10: File Input/Output and OS Interaction
 - File pointers (`FILE *`)  
 - Opening, reading, writing, and closing files (`fopen`, `fread`, `fwrite`, `fprintf`, `fscanf`)  
 - Command-line arguments (`argc`, `argv`)  
@@ -82,7 +88,7 @@
 
 ---
 
-## Module 10: Advanced CNO/RE-Specific Topics
+## Module 11: Advanced CNO/RE-Specific Topics
 - **The C Memory Model**: stack frames, heap, global/static, call stack, function prologue/epilogue  
 - **Compiling and Inspecting Binaries**:  
     - Compiler flags: `-g`, `-O0` vs `-O2`, `-Wall`, etc.  
@@ -104,14 +110,14 @@
 
 ---
 
-## Module 11: Mini-Projects and Capstone
+## Module 12: Mini-Projects and Capstone
 - Implement a small C project (chat server, calculator, file parser, etc.)  
 - Document, debug, and “attack” your own code (try to break it, then fix the bugs)  
 - Optional: Write intentionally vulnerable code, then find/exploit it  
 
 ---
 
-## Module 12: Supplementary/Bonus Topics
+## Module 13: Supplementary/Bonus Topics
 - Multi-file projects and Makefiles  
 - Intro to socket/network programming in C (TCP, UDP basics)  
 - Simple concurrency (`fork`, basic threads)  
