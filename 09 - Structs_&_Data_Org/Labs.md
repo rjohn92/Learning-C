@@ -1,4 +1,4 @@
-# Module 8 — Structs: Hands‑On Labs
+# Module 9 — Structs: Hands‑On Labs
 
 > Build comfort with `struct` fundamentals, `.` vs `->`, arrays of structs, copying, equality, nesting, alignment, and a small dynamic container. Each lab is short and incremental.
 >
@@ -10,7 +10,7 @@
 
 ---
 
-## Lab 8.1 — Declare, Initialize, Print
+## Lab 9.1 — Declare, Initialize, Print
 
 **Goal:** Create a `struct`, write to fields via `.`, and print.
 
@@ -49,7 +49,7 @@ int main(void) {
 
 ---
 
-## Lab 8.2 — Designated Initializers & Defaults
+## Lab 9.2 — Designated Initializers & Defaults
 
 **Goal:** Use initializer lists—positional and designated.
 
@@ -84,7 +84,7 @@ int main(void) {
 
 ---
 
-## Lab 8.3 — Pass by Value vs Pointer (`.` vs `->`)
+## Lab 9.3 — Pass by Value vs Pointer (`.` vs `->`)
 
 **Goal:** Write functions that **do** and **don’t** mutate the caller’s struct.
 
@@ -121,7 +121,7 @@ int main(void) {
 
 ---
 
-## Lab 8.4 — Arrays of Structs + Aggregates
+## Lab 9.4 — Arrays of Structs + Aggregates
 
 **Goal:** Create an array of cars, compute summary stats.
 
@@ -158,7 +158,7 @@ int main(void) {
 
 ---
 
-## Lab 8.5 — Sorting an Array of Structs
+## Lab 9.5 — Sorting an Array of Structs
 
 **Goal:** Sort cars by `price` ascending, then by `speed` descending.
 
@@ -207,7 +207,7 @@ int main(void) {
 
 ---
 
-## Lab 8.6 — Dynamic Allocation & Deep Copy
+## Lab 9.6 — Dynamic Allocation & Deep Copy
 
 **Goal:** Allocate a `struct` on the heap and implement deep copy of pointer fields.
 
@@ -256,7 +256,7 @@ int main(void) {
 
 ---
 
-## Lab 8.7 — Nested Structs & `->` Chaining
+## Lab 9.7 — Nested Structs & `->` Chaining
 
 **Goal:** Compose structs inside structs.
 
@@ -292,7 +292,7 @@ int main(void) {
 
 ---
 
-## Lab 8.8 — Field Offsets, Padding, and Reordering
+## Lab 9.8 — Field Offsets, Padding, and Reordering
 
 **Goal:** Observe `sizeof` and `offsetof` to see alignment/padding in memory.
 
@@ -327,7 +327,7 @@ int main(void) {
 
 ---
 
-## Lab 8.9 — Safe Equality: Per‑Field Comparison
+## Lab 9.9 — Safe Equality: Per‑Field Comparison
 
 **Goal:** Implement field‑wise equality; avoid `memcmp` pitfalls.
 
@@ -359,7 +359,7 @@ int main(void) {
 
 ---
 
-## Lab 8.10 — Returning Structs vs Pointers (Lifetime)
+## Lab 9.10 — Returning Structs vs Pointers (Lifetime)
 
 **Goal:** See copy semantics and lifetime risks.
 
@@ -400,7 +400,7 @@ int main(void) {
 
 ---
 
-## Lab 8.11 — `typedef` Convenience & `const` Correctness
+## Lab 9.11 — `typedef` Convenience & `const` Correctness
 
 **Goal:** Reduce verbosity and practice API const‑correctness.
 
@@ -431,7 +431,7 @@ int main(void) {
 
 ---
 
-## Lab 8.12 — Flexible Array Member (Advanced)
+## Lab 9.12 — Flexible Array Member (Advanced)
 
 **Goal:** Store variable‑length names inline with the struct allocation.
 
@@ -477,7 +477,7 @@ int main(void) {
 
 ---
 
-## Lab 8.13 — Minimal Dynamic Vector of `Car`
+## Lab 9.13 — Minimal Dynamic Vector of `Car`
 
 **Goal:** Implement a tiny growable array for practice with `realloc`.
 
