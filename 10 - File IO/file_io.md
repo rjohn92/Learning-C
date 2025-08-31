@@ -1,4 +1,4 @@
-# Module 9 — File Input/Output (Lab Notes)
+# Module 10 — File Input/Output (Lab Notes)
 
 > **Scope:** Practical, lab‑oriented notes for working with C file/stream I/O (text & binary), including safe parsing, error handling, and portability pitfalls (EOF, struct padding, endianness).
 

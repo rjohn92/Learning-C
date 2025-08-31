@@ -3,7 +3,7 @@
 
 > Build with: `gcc -Wall -Wextra -O0 -g file.c -o file` and run from the project dir.
 
-### Lab 9.1 — Char Reader
+### Lab 10.1 — Char Reader
 
 **Goal:** Open `hello.txt`, print all chars, handle errors.
 
@@ -12,14 +12,14 @@
 * If `fopen` fails, print `perror("hello.txt")` and return non‑zero.
 * **Deliverable:** `char_reader.c`; run `./char_reader > out.txt` and verify `out.txt` contents.
 
-### Lab 9.2 — Line Numberer
+### Lab 10.2 — Line Numberer
 
 **Goal:** Read `quote.txt` line‑by‑line with `fgets`, prefix with `N:`.
 
 * Use `char buf[1024];`, `int line = 0;` and `printf("%d: %s", ++line, buf);`.
 * **Deliverable:** `line_numberer.c`; show output matches expectations.
 
-### Lab 9.3 — Trusted `fscanf` vs Safe Parse
+### Lab 10.3 — Trusted `fscanf` vs Safe Parse
 
 **Goal:** Parse `whales.txt` as `name length mass`.
 
@@ -27,21 +27,21 @@
 * Part B (**safer**): `fgets` + `sscanf` or `strto*`; skip malformed lines.
 * **Deliverable:** two programs; include a bad line to show robust behavior.
 
-### Lab 9.4 — Text Writer
+### Lab 10.4 — Text Writer
 
 **Goal:** Use `fputc`/`fprintf`/`fputs` to generate `output.txt`.
 
 * Confirm file truncates on each run; add a variant using `"a"` append.
 * **Deliverable:** `text_writer.c`; attach `output.txt` sample.
 
-### Lab 9.5 — Binary Bytes & Hexdump
+### Lab 10.5 — Binary Bytes & Hexdump
 
 **Goal:** Write bytes `{5,37,0,88,255,12}` to `output.bin`, then read/print them.
 
 * Validate with `hexdump -C output.bin`.
 * **Deliverable:** `write_bytes.c`, `read_bytes.c`, screenshot/snippet of hexdump.
 
-### Lab 9.6 — Portable Integers (Big‑Endian)
+### Lab 10.6 — Portable Integers (Big‑Endian)
 
 **Goal:** Implement `write_u16_be` / `read_u16_be` and round‑trip a few values.
 
@@ -49,7 +49,7 @@
 * Inspect bytes with `hexdump`; read back and assert equality.
 * **Deliverable:** `ints_be.c` with helper functions + test harness.
 
-### Lab 9.7 — Error Injection & Reporting
+### Lab 10.7 — Error Injection & Reporting
 
 **Goal:** Prove your error paths work.
 

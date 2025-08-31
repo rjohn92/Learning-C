@@ -12,15 +12,8 @@ int cmp_speed_desc(const void *p, const void *q) {
     const struct car *a = p;
     const struct car *b = q;
 
-    if (a -> speed < b -> speed) {
-        return -1;
-    }
-    else if (b -> speed > b -> speed) {
-        return 1;
-    }
-    else {
-        return 0;
-    }
+    return (a->price < b->price) - (a->price > b->price);
+
 }
 
 static void print_all(const struct car *a, size_t n) {
