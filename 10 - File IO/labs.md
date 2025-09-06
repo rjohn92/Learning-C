@@ -13,8 +13,9 @@
 
 
 
+
+```c
 #include <stdio.h>
-```
 static void copy_all(FILE *fp) {
     // TODO: Implement Loop-Until-EOF with:
     //   int c; while ((c = fgetc(fp)) != EOF) { putchar(c); }
@@ -35,7 +36,7 @@ int main(void) {
     fclose(fp);
     return 0;
 }
-```
+```c
 
 * **Deliverable:** `char_reader.c`; run `./char_reader > out.txt` and verify `out.txt` contents.
 
@@ -65,7 +66,7 @@ int main(void) {
     return 0;
 }
 
-```
+```c
 * **Deliverable:** `line_numberer.c`; show output matches expectations.
 
 ### Lab 10.3 — Trusted `fscanf` vs Safe Parse
@@ -98,7 +99,7 @@ int main(void) {
     return 0;
 }
 
-```
+```c
 * **Deliverable:** two programs; include a bad line to show robust behavior.
 
 ### Lab 10.4 — Text Writer
@@ -134,7 +135,7 @@ int main(int argc, char **argv) {
     return 0;
 }
 
-```
+```c
 * **Deliverable:** `text_writer.c`; attach `output.txt` sample.
 
 ### Lab 10.5 — Binary Bytes & Hexdump
@@ -165,7 +166,7 @@ int main(void) {
     return 0;
 }
 
-```
+```c
 * **Deliverable:** `write_bytes.c`, `read_bytes.c`, screenshot/snippet of hexdump.
 
 ### Lab 10.6 — Portable Integers (Big‑Endian)
@@ -228,7 +229,7 @@ int main(int argc, char **argv) {
     return write_demo();
 }
 
-```
+```c
 * **Deliverable:** `ints_be.c` with helper functions + test harness.
 
 ### Lab 10.7 — Error Injection & Reporting
