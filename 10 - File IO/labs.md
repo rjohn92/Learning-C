@@ -36,7 +36,7 @@ int main(void) {
     fclose(fp);
     return 0;
 }
-```c
+```
 
 * **Deliverable:** `char_reader.c`; run `./char_reader > out.txt` and verify `out.txt` contents.
 
@@ -45,7 +45,7 @@ int main(void) {
 **Goal:** Read `quote.txt` line‑by‑line with `fgets`, prefix with `N:`.
 
 * Use `char buf[1024];`, `int line = 0;` and `printf("%d: %s", ++line, buf);`.
-```
+```c
 // line_numberer.c
 // Build: gcc -Wall -Wextra -O0 -g line_numberer.c -o line_numberer
 // Run:   ./line_numberer < quote.txt
@@ -66,7 +66,7 @@ int main(void) {
     return 0;
 }
 
-```c
+
 * **Deliverable:** `line_numberer.c`; show output matches expectations.
 
 ### Lab 10.3 — Trusted `fscanf` vs Safe Parse
@@ -75,7 +75,8 @@ int main(void) {
 
 * Part A: simple `fscanf` with width limits (expect count==3 per record).
 * Part B (**safer**): `fgets` + `sscanf` or `strto*`; skip malformed lines.
-```
+```c
+
 // whales_scan_trusted.c
 // Build: gcc -Wall -Wextra -O0 -g whales_scan_trusted.c -o whales_scan_trusted
 // Run:   ./whales_scan_trusted < whales.txt
@@ -99,7 +100,6 @@ int main(void) {
     return 0;
 }
 
-```c
 * **Deliverable:** two programs; include a bad line to show robust behavior.
 
 ### Lab 10.4 — Text Writer
@@ -107,7 +107,8 @@ int main(void) {
 **Goal:** Use `fputc`/`fprintf`/`fputs` to generate `output.txt`.
 
 * Confirm file truncates on each run; add a variant using `"a"` append.
-```
+```c
+
 // text_writer.c
 // Build: gcc -Wall -Wextra -O0 -g text_writer.c -o text_writer
 // Run:   ./text_writer w   # truncates
@@ -135,7 +136,6 @@ int main(int argc, char **argv) {
     return 0;
 }
 
-```c
 * **Deliverable:** `text_writer.c`; attach `output.txt` sample.
 
 ### Lab 10.5 — Binary Bytes & Hexdump
@@ -143,7 +143,8 @@ int main(int argc, char **argv) {
 **Goal:** Write bytes `{5,37,0,88,255,12}` to `output.bin`, then read/print them.
 
 * Validate with `hexdump -C output.bin`.
-```
+```c
+
 // write_bytes.c
 // Build: gcc -Wall -Wextra -O0 -g write_bytes.c -o write_bytes
 // Run:   ./write_bytes && hexdump -C output.bin
@@ -166,7 +167,6 @@ int main(void) {
     return 0;
 }
 
-```c
 * **Deliverable:** `write_bytes.c`, `read_bytes.c`, screenshot/snippet of hexdump.
 
 ### Lab 10.6 — Portable Integers (Big‑Endian)
@@ -175,8 +175,8 @@ int main(void) {
 
 * Write values: `0x0001, 0x1234, 0xBEEF` to `ints.bin` (BE order).
 * Inspect bytes with `hexdump`; read back and assert equality.
+```c
 
-```
 // ints_be.c
 // Build: gcc -Wall -Wextra -O0 -g ints_be.c -o ints_be
 // Run:   ./ints_be && hexdump -C ints.bin && ./ints_be read
@@ -229,7 +229,6 @@ int main(int argc, char **argv) {
     return write_demo();
 }
 
-```c
 * **Deliverable:** `ints_be.c` with helper functions + test harness.
 
 ### Lab 10.7 — Error Injection & Reporting
@@ -238,7 +237,8 @@ int main(int argc, char **argv) {
 
 * Try to open a missing file; print `strerror(errno)`.
 * Force a short read/write (e.g., read past EOF; close stream then attempt I/O) and report via `ferror`/`feof`.
-```
+```c
+
 // errors_demo.c
 // Build: gcc -Wall -Wextra -O0 -g errors_demo.c -o errors_demo
 // Run:   ./errors_demo
