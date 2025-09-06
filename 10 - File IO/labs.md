@@ -10,6 +10,33 @@
 * Create `hello.txt` with `Hello, world!\n`.
 * Implement the Loop‑Until‑EOF idiom with `int c = fgetc(fp);`.
 * If `fopen` fails, print `perror("hello.txt")` and return non‑zero.
+
+
+
+#include <stdio.h>
+```
+static void copy_all(FILE *fp) {
+    // TODO: Implement Loop-Until-EOF with:
+    //   int c; while ((c = fgetc(fp)) != EOF) { putchar(c); }
+    // Also handle errors on stdout (putchar) and on the stream (ferror(fp)).
+    (void)fp; // remove after implementing
+}
+
+int main(void) {
+    FILE *fp = fopen("hello.txt", "r");
+    if (!fp) {
+        // TODO: Per lab, call perror("hello.txt") and return non-zero
+        return 1; // placeholder
+    }
+
+    copy_all(fp);
+
+    // Optional: check ferror(fp) and perror if needed
+    fclose(fp);
+    return 0;
+}
+```
+
 * **Deliverable:** `char_reader.c`; run `./char_reader > out.txt` and verify `out.txt` contents.
 
 ### Lab 10.2 — Line Numberer
