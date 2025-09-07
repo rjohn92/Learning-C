@@ -45,6 +45,7 @@ int main(void) {
 **Goal:** Read `quote.txt` line‑by‑line with `fgets`, prefix with `N:`.
 
 * Use `char buf[1024];`, `int line = 0;` and `printf("%d: %s", ++line, buf);`.
+
 ```c
 // line_numberer.c
 // Build: gcc -Wall -Wextra -O0 -g line_numberer.c -o line_numberer
@@ -66,7 +67,7 @@ int main(void) {
     return 0;
 }
 
-
+```
 * **Deliverable:** `line_numberer.c`; show output matches expectations.
 
 ### Lab 10.3 — Trusted `fscanf` vs Safe Parse
@@ -99,7 +100,7 @@ int main(void) {
     (void)name; (void)length; (void)mass; // remove after implementing
     return 0;
 }
-
+```
 * **Deliverable:** two programs; include a bad line to show robust behavior.
 
 ### Lab 10.4 — Text Writer
@@ -135,7 +136,7 @@ int main(int argc, char **argv) {
     fclose(fp);
     return 0;
 }
-
+```
 * **Deliverable:** `text_writer.c`; attach `output.txt` sample.
 
 ### Lab 10.5 — Binary Bytes & Hexdump
