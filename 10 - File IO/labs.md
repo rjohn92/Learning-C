@@ -167,6 +167,8 @@ int main(void) {
     return 0;
 }
 
+```
+
 * **Deliverable:** `write_bytes.c`, `read_bytes.c`, screenshot/snippet of hexdump.
 
 ### Lab 10.6 — Portable Integers (Big‑Endian)
@@ -175,6 +177,7 @@ int main(void) {
 
 * Write values: `0x0001, 0x1234, 0xBEEF` to `ints.bin` (BE order).
 * Inspect bytes with `hexdump`; read back and assert equality.
+
 ```c
 
 // ints_be.c
@@ -228,7 +231,7 @@ int main(int argc, char **argv) {
     }
     return write_demo();
 }
-
+```
 * **Deliverable:** `ints_be.c` with helper functions + test harness.
 
 ### Lab 10.7 — Error Injection & Reporting
