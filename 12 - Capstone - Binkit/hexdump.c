@@ -9,6 +9,9 @@ int cmd_hexdump(int argc, char **argv) {
     if (argc > 1 && argv[1][0] != '-') {
         fp = fopen(argv[1], "rb");
         if (!fp) { perror("fopen"); return 1; }
+    } else if (argc < 1) {
+        fprintf(stderr, "Usage: %s [file]\n", argv[0]);
+        return 1;
     }
 
     // Read 1 byte at a time and print it in hex, 16 per line.
@@ -35,4 +38,8 @@ int cmd_hexdump(int argc, char **argv) {
 
     if (fp != stdin) fclose(fp);
     return 0;
+}
+
+int main(int argc, char **argv) {
+    return cmd_hexdump(argc, argv);
 }
