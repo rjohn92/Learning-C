@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdint.h>
+
 
 // accept optional filename
 int main(int argc, char *argv[]) {
@@ -23,12 +25,19 @@ int main(int argc, char *argv[]) {
 
     unsigned int got = fread(buf, 1, sizeof buf, fp);
     while (got > 0) {
+        char string_chunk[sizeof buf + 1] = {0}; // 16 chars + null terminator
         printf("Offset %08X: ", offset);
-        for (size_t i = 0; i < got; i++) {
+        for (size_t i = 0; i < 15; i++) {
             printf("%02X ", buf[i]);
+            if (buf[i] >= 0x20 && buf[i] <= 0x7E) {
+                string_chunk[i] = buf[i];
+            } else {
+                string_chunk[i] = '.';
+            }
         }
-        printf("\n");
 
+        
+        printf("          %s\n", string_chunk);
         offset += got;
         if (got < sizeof buf) {
             break;
