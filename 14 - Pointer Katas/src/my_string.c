@@ -42,8 +42,8 @@ int my_strcmp(const char *a, const char *b) {
                 return 1;
             }
         }
-        if (*p1 == '\0' || *p2 == '\0') {
-            break;
+        if (*p1 == '\0' ) {
+            return 0;
         }
         p1++;
         p2++;
@@ -55,7 +55,7 @@ int my_strcmp(const char *a, const char *b) {
 
 int main() {
     const char *test = "Hello, World!\0";
-    const char *same_test = "";
+    const char *same_test = "Hello, World!!";
     const char *diff_test = "Hello, Earth!\0";
     printf("Length of '%s' is %zu\n", test, my_strlen(test));
     
