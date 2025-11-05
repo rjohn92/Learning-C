@@ -4,16 +4,11 @@
 #include <errno.h>
 #include <string.h>
 #include <ctype.h>  
+#include "wc_core.h"
 
-// Function to open a file stream for reading bytes from a specified path
-static FILE* open_stream(const char *path) {
-    FILE *fp = fopen(path, "rb");
-    if (!fp) {
-        fprintf(stderr, "Error opening file: %s\n", path);
-        return NULL;
-    }
-    return fp;
-}
+
+
+
 // Function to read bytes from stdin if no path is provided (i.e argc ==1)
 // *fp = open_stream(path);
 // *out = total bytes read
@@ -35,7 +30,10 @@ int count_bytes(FILE *fp, size_t *out) {
     return 0;
 }
 
-int count_word(FILE *fp, size_t *out) {
+// fp : file pointer to read from
+// out: pointer to size_t to store word count else we return -1 on error which is checked by caller 
+
+int count_words(FILE *fp, size_t *out) {
     unsigned char buffer[4096];
     size_t total_words = 0;
     int in_word = 0; // Flag to track if we are inside a word
@@ -50,28 +48,21 @@ int count_word(FILE *fp, size_t *out) {
             break; // EOF reached
         }
         for (size_t i = 0; i < n; i++) {
-            if (isspace(buffer[i])) {
-                if (in_word==1) {
+            if (isspace(buffer[i]) && in_word== 1) {
                     in_word = 0; // Exiting a word
                 } else {
                     // Still outside a word
                     if (in_word==0) {
                         total_words++; // Starting a new word
                         in_word = 1;
-
                     }
                 }
             }
-        }
+        
     }
-}
-
-void usage(const char *prog) {
-    fprintf(stderr, "Usage: %s [file]\n", prog);
-    fprintf(stderr, "  file   optional file path (stdin if omitted)\n");
+    *out = total_words;
+    return 0;
 }
 
 
-int main(int argc, char **argv) {
-    
-}
+
