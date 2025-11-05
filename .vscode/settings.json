@@ -2,6 +2,7 @@
     "files.associations": {
         "compare": "c",
         "type_traits": "c",
-        "assert.h": "c"
+        "assert.h": "c",
+        "errno.h": "c"
     }
 }
