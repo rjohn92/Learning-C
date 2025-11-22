@@ -111,7 +111,7 @@
 ---
 
 ## Module 12: Mini-Projects and Capstone
-- Implement a small C project (chat server, calculator, file parser, etc.)  
+- Implement a small C project (echo-args, wc-bytes, file parser, hexdump etc.)  
 - Document, debug, and “attack” your own code (try to break it, then fix the bugs)  
 - Optional: Write intentionally vulnerable code, then find/exploit it  
 

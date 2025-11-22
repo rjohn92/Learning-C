@@ -3,6 +3,9 @@
         "compare": "c",
         "type_traits": "c",
         "assert.h": "c",
-        "errno.h": "c"
+        "errno.h": "c",
+        "string.h": "c",
+        "stddef.h": "c",
+        "stdlib.h": "c"
     }
 }
